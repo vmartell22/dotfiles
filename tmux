@@ -1,4 +1,3 @@
-# ~/.tmux.conf
 # By Tyler Mulligan. Public domain.
 #
 # This configuration file binds many of the common GNU screen key bindings to
@@ -26,7 +25,6 @@ bind x lock-server
 # screen ^C c
 unbind ^C
 bind ^C new-window
-bind c
 bind c new-window
  
 # detach ^D d
@@ -98,9 +96,6 @@ bind h split-window -v
 # History
 set -g history-limit 1000
  
-# Pane
-unbind o
-bind C-s down-pane
  
 # Terminal emulator window title
 set -g set-titles on
@@ -124,13 +119,39 @@ setw -g window-status-current-bg red
 setw -g clock-mode-colour green
 setw -g clock-mode-style 24
  
-# :kB: focus up
-unbind Tab
-bind Tab down-pane
-unbind BTab
-bind BTab up-pane
- 
 # " windowlist -b
 unbind '"'
 bind '"' choose-window
+
+#### COLOUR (Solarized dark)
+
+# default statusbar colors
+set-option -g status-bg black #base02
+set-option -g status-fg yellow #yellow
+set-option -g status-attr default
+
+# default window title colors
+set-window-option -g window-status-fg brightblue #base0
+set-window-option -g window-status-bg default
+#set-window-option -g window-status-attr dim
+
+# active window title colors
+set-window-option -g window-status-current-fg brightred #orange
+set-window-option -g window-status-current-bg default
+#set-window-option -g window-status-current-attr bright
+
+# pane border
+set-option -g pane-border-fg black #base02
+set-option -g pane-active-border-fg brightgreen #base01
+
+# message text
+set-option -g message-bg black #base02
+set-option -g message-fg brightred #orange
+
+# pane number display
+set-option -g display-panes-active-colour blue #blue
+set-option -g display-panes-colour brightred #orange
+
+# clock
+set-window-option -g clock-mode-colour green #green
 
