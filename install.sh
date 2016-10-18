@@ -4,9 +4,6 @@ lsb_release="$(perl -nle 'print $1 if/.*DISTRIB_RELEASE=(.*)/' /etc/lsb-release)
 
 cp tmux ~/.tmux.conf
 cp screenrc ~/.screenrc
-cp -R vim ~/.vim
-cp vimrc ~/.vimrc
-cp spacemacs ~/.spacemacs
 
 mkdir -p ~/.ncmpcpp
 
