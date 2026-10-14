@@ -1,0 +1,43 @@
+include ./Catppuccin-Mocha.conf
+enabled_layouts tall:bias=50;full_size=0;mirrored=false
+font_family      BlexMono Nerd Font Mono Medium 
+bold_font        BlexMono Nerd Font Mono Bold
+italic_font      BlexMono Nerd Font Mono Medium Italic
+bold_italic_font BlexMono Nerd Font Mono Bold Italic
+font_size        18.0
+
+tab_bar_min_tabs            1
+tab_bar_edge                bottom
+tab_bar_style               hidden
+#tab_bar_style              powerline
+tab_powerline_style         round
+tab_title_template          {title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}
+window_border_width         2.5pt
+window_margin_width         2.5
+single_window_margin_width  -2
+window_padding_width        2.5
+
+enable_audio_bell no
+scrollback_lines -1
+scrollback_pager_history_size 0
+shell /opt/homebrew/bin/fish --login --interactive
+startup_session ~/.work-local-kitty-session
+
+map ctrl+f9 launch --type=tab --window-title LOCAL fish -c "/Users/vmartell/.work-local-setup.fish"
+map ctrl+f10 launch --type=tab --window-title VAGRANT fish -c "/Users/vmartell/.work-vagrant-setup.fish"
+map ctrl+f11 launch --type=tab --window-title ZSH fish -c "/Users/vmartell/.work-local-zsh.fish"
+map ctrl+f12 launch --type=tab --window-title BASH fish -c "/Users/vmartell/.work-local-bash.fish"
+
+# it's like BYOBU, but different
+map ctrl+shift+f9 launch --cwd=current fish -c "byobu"
+map ctrl+shift+right next_window
+map ctrl+shift+left previous_window
+map ctrl+shift+page_up next_tab
+map ctrl+shift+page_down previous_tab
+map ctrl+shift+t combine : new_tab : set_tab_title
+map ctrl+shift+n combine : new_os_window : set_window_title
+map ctrl+shift+c combine : new_tab : set_tab_title
+map ctrl+shift+f2 combine : new_window : set_window_title
+map ctrl+shift+f8 set_window_title
+map ctrl+shift+s select_tab
+

@@ -1,0 +1,80 @@
+# This is the configuration file for Ghostty.
+#
+# This template file has been automatically created at the following
+# path since Ghostty couldn't find any existing config files on your system:
+#
+#   /home/vmartell/.config/ghostty/config
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+# Config syntax crash course
+# ==========================
+# # The config file consists of simple key-value pairs,
+# # separated by equals signs.
+# font-family = Iosevka
+# window-padding-x = 2
+#
+# # Spacing around the equals sign does not matter.
+# # All of these are identical:
+# key=value
+# key= value
+# key =value
+# key = value
+#
+# # Any line beginning with a # is a comment. It's not possible to put
+# # a comment after a config option, since it would be interpreted as a
+# # part of the value. For example, this will have a value of "#123abc":
+# background = #123abc
+#
+# # Empty values are used to reset config keys to default.
+# key =
+#
+# # Some config options have unique syntaxes for their value,
+# # which is explained in the docs for that config option.
+# # Just for example:
+# resize-overlay-duration = 4s 200ms
+command = /usr/bin/fish
+theme = catppuccin-macchiato.conf
+font-family = "BlexMono Nerd Font Mono Medium"
+font-family-bold = "BlexMono Nerd Font Mono Bold"
+font-family-italic = "BlexMono Nerd Font Mono Medium Italic"
+font-family-bold-italic = "BlexMono Nerd Font Mono Bold Italic"
+font-size = 13
+font-thicken = true
+shell-integration = fish
+gtk-tabs-location = hidden
+gtk-wide-tabs = false
+window-decoration = auto
+shell-integration = detect
+shell-integration-features = cursor, sudo, title
+keybind = ctrl+a>c=new_tab
+
+#enabled_layouts tall:bias=50;full_size=1;mirrored=false
+#tab_bar_edge top
+#tab_bar_style powerline
+#enable_audio_bell no
+#linux_display_server x11
+#linux_display_server wayland
+#scrollback_lines -1
+#scrollback_pager_history_size 0
+#startup_session ~/.work-local-kitty-session
+#map ctrl+f8 set_window_title
+#map ctrl+f9 launch --type=tab --window-title LOCAL /home/vmartell/.work-local-setup.sh
+#map ctrl+f10 launch --type=tab --window-title VAGRANT /home/vmartell/.work-vagrant-setup.sh
+#map ctrl+f11 launch --type=tab --window-title ZSH /usr/bin/byobu new-session -n "WORK ZSH" "set SESS \$(/usr/bin/byobu display-message -p '#S'); /usr/bin/byobu set-option -s -t \"\$SESS\" default-shell /usr/bin/zsh; /usr/bin/byobu set-option -s -t \"\$SESS\" default-command /usr/bin/zsh; /usr/bin/zsh"
+#map ctrl+f12 launch --type=tab --window-title BASH /usr/bin/byobu new-session -n "WORK BASH" "set SESS \$(/usr/bin/byobu display-message -p '#S'); /usr/bin/byobu set-option -s -t \"\$SESS\" default-shell /usr/bin/bash; /usr/bin/byobu set-option -s -t \"\$SESS\" default-command /usr/bin/bash; /usr/bin/bash"
+#map ctrl+page_up next_tab
+#map ctrl+page_down previous_tab
+
+# Examples
+#map f9 launch --hold --type=tab --cwd=current --window-title LOCAL /usr/bin/byobu
+#map f10 launch --hold --type=tab --cwd=current --window-title EC /home/vmartell/.ec_jumper.sh bast003.ccb.edgecastcdn.net
+

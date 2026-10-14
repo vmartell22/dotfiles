@@ -1,0 +1,23 @@
+ls
+# The modern way to force-save a stream in Nushell<\n>carapace _carapace nushell | save -f $"($nu.cache-dir)/carapace.nu"<\n>
+carapace _carapace nushell | save -f $"($nu.cache-dir)/carapace.nu"
+ls
+ls -la
+ls
+ls ~/.git_checkouts/catppuccin-nushell/themes/catppuccin_macchiato.nu
+;s
+ls
+clear
+ls
+ls -la
+ls
+ls -la
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+source /home/vmartell/.git_checkouts/catppuccin-nushell/themes/catppuccin_mocha.nu
+ls

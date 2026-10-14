@@ -1,0 +1,19 @@
+return {
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type _ibl.config
+    opts = {
+      indent = {
+        char = "│", -- The line character used for guides
+      },
+      scope = {
+        enabled = true, -- Highlights the current indentation level scope you are working in
+        show_start = false,
+        show_end = false,
+      },
+    },
+  },
+}
+

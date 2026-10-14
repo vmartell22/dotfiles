@@ -1,0 +1,8 @@
+cd ~
+
+#launch --hold --window-title "the-giant" fish -c 'neofetch --backend kitty --source /home/vmartell/Scratch/catppuccin-wallpapers/os/pop-black-4k.png'
+# launch --hold --window-title "the-giant" fish -c 'neofetch --ascii_distro popos'
+# launch --hold --window-title "the-gibson" fish -c 'fastfetch --kitty /home/vmartell/Scratch/catppuccin-wallpapers/os/ubuntu-black-4k.png --logo-width 50'
+
+launch --title="the-gibson" --hold fastfetch
+focus_os_window
